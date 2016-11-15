@@ -1,0 +1,39 @@
+<html>
+<head>
+    {% include('head.twig') %}
+    <link href="/Stylesheets/Chat.css" rel="stylesheet">
+    <title>Chat with people! - Sindria</title>
+</head>
+<body>
+<header>
+</header>
+<main>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--1-col"></div>
+        <div class="mdl-cell mdl-cell--10-col">
+            <div class="chat-box">
+                <div class="online mdl-color-text--pink">
+                    10 people are online!
+                </div>
+                <div class="transcript">
+                </div>
+                <div class="message-box">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" id="message">
+                        <label class="mdl-textfield__label" for="message">Type your message here!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+<script src="/Scripts/Chat.js">
+</script>
+<script>
+    var selfUsername = "{{ username }}";
+    new Chat(document.querySelector('#message'));
+</script>
+</body>
+</html>

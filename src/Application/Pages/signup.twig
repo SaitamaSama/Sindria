@@ -1,0 +1,52 @@
+<html>
+<head>
+    {% include('head.twig') %}
+    <title>Sign Up for Sindria!</title>
+</head>
+<body>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+        <form id="signUpForm">
+            <div class="form-content">
+                <h1 class="mdl-typography--text-left">Sign Up!</h1>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="username">
+                    <label class="mdl-textfield__label" for="username">Username</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="email">
+                    <label class="mdl-textfield__label" for="email">Email</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="password">
+                    <label class="mdl-textfield__label" for="password">Password</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="password-re">
+                    <label class="mdl-textfield__label" for="password-re">Retype Password</label>
+                </div>
+                <br>
+                <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored">
+                    Go <i class="material-icons">send</i>
+                </button>
+            </div>
+            <div class="spinner-overlay">
+                <div class="mdl-spinner mdl-js-spinner is-active" id="signupLoader"></div>
+                <br>
+                Signing you up! May take a moment...
+            </div>
+        </form>
+        <small>Already got an account <a href="/login">Login</a></small>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+</div>
+{% include('snackbar.twig') %}
+<script src="/Scripts/SignUp.js"></script>
+<script src="/Scripts/Toast.js"></script>
+<script>
+    var signup = new SignUp('signUpForm');
+    signup.init();
+</script>
+</body>
+</html>

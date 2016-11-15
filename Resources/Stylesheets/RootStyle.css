@@ -1,0 +1,60 @@
+body {
+    font-family: "Roboto Mono", "Inconsolata", "Source Code Pro", "Courier", monospace;
+    background: #212121;
+    color: #FFF;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed", "Roboto", "Open Sans", "Helvetica", sans-serif;
+    font-weight: 300 !important;
+    text-transform: uppercase;
+}
+
+.material-icons {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.mdl-textfield__input {
+    font-family: "Roboto Mono", "Inconsolata", "Source Code Pro", "Courier", monospace;
+    border-bottom: 1px solid #FFF;
+}
+
+#loginForm {
+    text-align: center;
+    margin-top: 30%;
+    position: relative;
+}
+#signUpForm {
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+}
+
+.mdl-snackbar {
+    font-family: "Roboto Mono", "Inconsolata", "Source Code Pro", "Courier", monospace;
+}
+
+.mdl-textfield__label {
+    color: #FFF;
+}
+
+.mdl-button {
+    font-family: inherit;
+}
+
+.spinner-overlay {
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 50%;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    transition: 0.3s all;
+    display: none;
+}
+
+.success-icon {
+    font-size: 40px !important;
+}
